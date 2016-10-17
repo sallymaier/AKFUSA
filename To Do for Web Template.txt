@@ -1,0 +1,5 @@
+To Do for Web Template
+
+-Word Template for Text Formatting
+-Mustache linked spreadsheet for meta info
+-Image folder system
