@@ -248,13 +248,26 @@ li {
 /*}*/
 
 /* Interior pages */
+
 #page-title-image .page-title,#post-title-image .page-title {
     background-color: rgba(0,0,0,0.3);
     padding-top: 40px;
     padding-bottom: 40px;
 }
 
-#polygon-link-titles {
+.subtitle-title {
+    font-size: 30px;
+    text-align: center;
+    line-height: 32px;
+    letter-spacing: 0;
+    color: #000;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 0 15%;
+}
+
+/*#polygon-link-titles {
     position: relative;
     margin-bottom: -65px;
     padding-top: 40px;
@@ -268,7 +281,7 @@ li {
 
 #polygon-links .wpb_content_element {
     margin-bottom: 0;
-}
+}*/
 
 .news-grid {
     background-color: #ddd;
@@ -347,18 +360,6 @@ li {
 #mk-page-title {
 }
 
-.subtitle-title {
-    font-size: 30px;
-    text-align: center;
-    line-height: 32px;
-    letter-spacing: 0;
-    color: #000;
-    font-weight: 600;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    padding: 0 15%;
-}
-
 .vc_grid-filter {
     margin-bottom: 35px !important;
 }
@@ -398,7 +399,7 @@ li {
     display: none !important;
 }
 
-.staff-image {
+/*.staff-image {
     width: 235px;
 }
 
@@ -434,7 +435,7 @@ li {
     width: 80%;
     float: left;
     padding-top: 0;
-}
+}*/
 
 .search-title {
     font-size: 18px !important;
@@ -491,7 +492,7 @@ a.button-width {
 /* Slideshow CSS */
 /*.meteor-slides .mslide {height: 650px !important;}
 .meteor-slides .meteor-clip {height: 1200px;}*/
-.slider-title {
+/*.slider-title {
     display: inline-block;
     position: absolute;
     bottom: 0 !important;
@@ -502,7 +503,7 @@ a.button-width {
     z-index: 100;
 }
 
-/*.slider-title h2 {color:#ffffff !important;font-size:30px;line-height: 40px;font-weight:100;text-align: center;padding:40px 100px;margin:0;}*/
+.slider-title h2 {color:#ffffff !important;font-size:30px;line-height: 40px;font-weight:100;text-align: center;padding:40px 100px;margin:0;}
 .slider-title h2 {
     color: #fff !important;
     font-size: 28px;
@@ -516,7 +517,7 @@ a.button-width {
 .slider-caption p {
     display: block;
     margin: 5% 15%;
-}
+}*/
 
 /* Social Share Icons */
 .csbwfs-social-widget {
@@ -790,16 +791,14 @@ a.button-width {
 }
 
 @media screen and (max-width: 768px) {
-    .staff-image {
+     .staff-image {
         display: none;
     }
 
     .staffblock-grid .vc_gitem-animated-block {
         width: 100% !important;
     }
-}
 
-@media screen and (max-width: 767px) {
     .columnborderleft {
         border-left: none !important;
         padding-left: 15px !important;
@@ -954,11 +953,12 @@ a.button-width {
 }
 
 /*---end social share css----*/
+
 /*----- Single Post Style---------*/
-.vc_custom_1431584479145 {
+/*.vc_custom_1431584479145 {
     padding-left: 20% !important;
     padding-right: 20% !important;
-}
+}*/
 
 /*********Start Css for Tag Insert*****************/
 #tgID a {
@@ -20343,6 +20343,7 @@ input,button,textarea {
     .vertical-condensed-state #mk-header.header-structure-vertical:hover ~ #theme-page > .mk-main-wrapper-holder,.vertical-condensed-state #mk-header.header-structure-vertical:hover ~ #theme-page > .mk-page-section,.vertical-condensed-state #mk-header.header-structure-vertical:hover ~ #theme-page > .wpb_row,.vertical-condensed-state #mk-header.header-structure-vertical:hover ~ #mk-page-title,.vertical-condensed-state #mk-header.header-structure-vertical:hover ~ #mk-footer {
         padding-left: 280px;
     }
+    
 }
 
 .mk-header-logo,.mk-header-logo a {
