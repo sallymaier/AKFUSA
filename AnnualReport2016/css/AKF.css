@@ -1,6 +1,63 @@
 
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 
+* { box-sizing: border-box; }
+.video-background {
+  background: transparent;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -99;
+  position: fixed;
+}
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
 
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-color: black;
+  mix-blend-mode: lighten;
+  opacity: .5;
+}
+
+#vidtop-content {
+  top: 0;
+  color: #fff;
+}
+
+.hero .container {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);   
+  width: 100%;
+  font-size: .75em;
+}
+
+.whitebackground {
+  background-color: white;
+  z-index: 100;
+  position: relative;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video-foreground { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-foreground { width: 300%; left: -100%; }
+}
 
 
 
@@ -10,30 +67,50 @@
 html {
   position: relative;
   min-height: 100%;
-  font-family: "proxima-nova",sans-serif;
+  font-family: "proxima-nova", "Montserrat", sans-serif;
+  font-weight: 300;
 }
 
 
 
 body {
-  padding-bottom: 40px;
-  color: #5a5a5a;
-  font-family: "proxima-nova",sans-serif;
-  font-weight: 200;
+/*  padding-bottom: 40px;
+*/  color: #5a5a5a;
+  font-family: "proxima-nova", "Montserrat", sans-serif;
+  font-weight: 300;
 
 }
 
-h1 {
+/*h1 {
   font-size: 3em;
-  font-weight: 100;
-
-}
+  font-weight: 900;
+  letter-spacing: .02em;
+  line-height: 1.2em;
+  font-family:"Playfair Display", Georgia, serif;
+  color: green;
+}*/
 
 
 h2 {
-  letter-spacing: .02em;
+  font-weight: 100;
+/*  font-size:.5em;
+  text-transform: uppercase;
+  letter-spacing: .9;*/
+  
 }
 
+h3 {
+    margin-top: 1em;
+    font-size: 1.2em;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+h4 {
+  font-size: 1.2em;
+  margin-top: .25em;
+}
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
@@ -61,7 +138,7 @@ h2 {
 }
 
 .navbar-default {
-  background-color: transparent;
+  background-color: white;
 }
 
 
@@ -71,16 +148,17 @@ h2 {
   position: relative;
   overflow: hidden;
   color: white;
-  padding-top: 70vh;
   background-color: transparent;
   height: 100vh;
-  margin-bottom: 0
+  margin-bottom: 0;
+  z-index: 100;
 }
 
 .hero p {
-  font-size: 2em;
+  font-size: 1.5em;
   padding-bottom: 1em;
   line-height: 1.35em;
+  font-weight: 300;
 }
 
 /* Hero jumbotron background with overlays */
@@ -94,30 +172,36 @@ h2 {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background-image: url("../img/poppyfruit.png");
-  background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-attachment: fixed;
+
 }
 
 .title {
   position: relative;
   overflow: hidden;
   color: white;
-  height: 80vh;
-  padding-top: 50vh;
+  text-align: center;
+  padding-right: 3em;
+  padding-left: 3em;
+}
+
+.title h1 {
+  font-family: "Playfair Display", "Bodoni", "Georgia", serif;
+  font-style: italic;
+  font-weight: 600;
+
+  padding-bottom: .25em;
 }
 
 .title h2 {
+  font-weight: 300;
   font-size: 1.5em;
   padding-bottom: 1em;
   line-height: 1.35em;
   text-transform: uppercase;
   letter-spacing: .1em
 }
+
+
 
 /* Hero jumbotron background with overlays */
 
@@ -130,23 +214,13 @@ h2 {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background-image: url("../img/fieldsmountains.png");
-  background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-attachment: fixed;
+
 }
 
 
 /* Features in About section */
 
-.featurette-heading {
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -1px;
-}
+
 
 .featurette-image {
     height: 300px;
@@ -156,6 +230,14 @@ h2 {
 .featurette-image img {
   width: 100%;
 
+}
+
+.rounded-circle {
+  border-radius: 50%;
+}
+
+.lead {
+  padding-bottom: 2em;
 }
 
 /*Products content div*/
@@ -206,14 +288,17 @@ h2 {
   margin-left: 10px;
 }
 
-.marketing .thumbnail ul {
+.marketing .thumbnail p {
   display: inline-block;
-  text-align: left;
-  -webkit-padding-start: 20px;
+  text-align: center;
   padding-bottom: 15px;
 }
 
-/*Centering bottom sections*/
+.thumbnail {
+  border:0;
+  text-align: center;
+}
+
 #experience {
   text-align: center;
 }
@@ -273,10 +358,10 @@ h2 {
   margin-bottom: 20px;
 }
 
-body {
-  /* Margin bottom by footer height */
+/*body {
+   Margin bottom by footer height 
   margin-bottom: 120px;
-}
+}*/
 
 
 /* RESPONSIVE CSS
@@ -295,14 +380,10 @@ body {
     padding-right: 0;
     padding-left: 0;
   }
+.navbar-padding {
+    padding-top: 50px;
+}
 
-  .hero {
-    padding-top: 70vh;
-  }
-
-  .title {
-    padding-top: 50vh;
-  }
 
   /* making assessments modal 3 cols */
 
@@ -326,6 +407,13 @@ body {
     left: 0;
   }
 
+  .hero .container {
+    max-width: 798px;
+    font-size: 1em;
+
+  }
+
+
 
 
 
@@ -334,9 +422,7 @@ body {
     border-radius: 4px;
   }
 
-  .featurette-heading {
-    font-size: 35px;
-  }
+
 }
 
 @media (min-width: 992px) {
