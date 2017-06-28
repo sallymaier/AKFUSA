@@ -118,6 +118,10 @@ blockquote h2 {
   font-size: 1.75em;
   letter-spacing: .01em;
 }
+
+.colwidth img {
+  width: 100%;
+}
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 
@@ -145,6 +149,26 @@ blockquote h2 {
 
 .navbar-default {
   background-color: white;
+}
+
+.logotile {
+    width: 25%;
+    padding:100%;
+    padding: 20px;
+    background-color: white;
+    transform: rotate(45deg);
+    opacity: .8;
+    position: fixed;
+    z-index: 1000;
+
+
+}
+
+.logocontainer {
+  position: fixed;
+  z-index: 2000;
+  left:112.5px;
+  transform: translateX(-50%);
 }
 
 
